@@ -1,0 +1,14 @@
+<% for (message of flashMessages) { %> <% for (key of Object.keys(message)) { %>
+<% if (message[key].length) { %>
+
+<div class="alert alert-<%= key %> alert-dismissable fade show" role="alert">
+  <%= message[key] %>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+</div>
+
+<% } %> <% } %> <% } %>
